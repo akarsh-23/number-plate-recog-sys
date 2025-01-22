@@ -2,7 +2,7 @@ import cv2
 import os
 
 # Path to the Haar Cascade XML file for license plate detection
-cascade_path = "/home/akarsh/NPRS/haarcascade_russian_plate_number.xml"
+cascade_path = "./haarcascade_russian_plate_number.xml"
 plate_cascade = cv2.CascadeClassifier(cascade_path)
 
 if plate_cascade.empty():
@@ -34,5 +34,5 @@ def detect_license_plate(image_path):
     print(f"Image with detected license plate saved to: {output_path}")
 
 # Path to the input image
-image_path = "/home/akarsh/NPRS/car_image.png"
+image_path = "./car_image.png"
 detect_license_plate(image_path)
